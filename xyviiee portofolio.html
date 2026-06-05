@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYVIIEE ARCHIVE // PERSONAL PORTFOLIO</title>
+    <style>
+        /* --- PREMIUM MINIMALIST CONFIG --- */
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: #0c0c0e; 
+            color: #f3f4f6;
+            overflow-x: hidden;
+            padding: 0 6%;
+        }
+
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.2rem;
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: #888;
+            font-weight: 400;
+        }
+
+        
+        .profile-section {
+            padding: 80px 0 60px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .profile-frame {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        .profile-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-section h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        .profile-section h1 span {
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+        }
+
+        .bio-text {
+            font-size: 1.1rem;
+            color: #8e8e93;
+            max-width: 650px;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+            
+        .section-title {
+            padding: 80px 0 30px 0;
+            font-size: 2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 40px;
+        }
+
+        .section-title span {
+            font-size: 0.9rem;
+            color: #555;
+            font-weight: 400;
+        }
+
+    
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .photo-card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .photo-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .photo-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .photo-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(12, 12, 14, 0.9));
+            font-size: 0.85rem;
+            color: #a1a1aa;
+            font-weight: 300;
+        }
+
+        /* --- LINK WEBLOG CERPEN SECTION --- */
+        .blog-section {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 80px;
+            transition: 0.3s ease;
+        }
+
+        .blog-section:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .blog-section h3 {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .blog-section p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        .blog-button {
+            display: inline-block;
+            background: #f3f4f6;
+            color: #0c0c0e;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .blog-button:hover {
+            background: #ffffff;
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(255,255,255,0.1);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #444;
+        }
+
+        @media (max-width: 600px) {
+            footer {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">_XYVIIEE <span>// ARCHIVE</span></div>
+        <div style="font-size: 0.9rem; color: #666;">PORTFOLIO</div>
+    </nav>
+
+    <!-- 1. FOTO PROFIL & 2. LATAR BELAKANG -->
+    <section class="profile-section">
+        <div class="profile-frame">
+            <!-- 🛠️ Ganti profil.jpg pakai foto tampanmu -->
+            <img src="profile.jpeg" alt="Xyviiee Profile">
+        </div>
+        <h1>FOTOGRAFER & <br><span>STORYTELLER.</span></h1>
+        <p class="bio-text">
+            Haii aku Xyviiee bisa di panggil Pyann konten kreator kecil yang mendalami skill fotografi dari ekstrakurikuler sekolah dari SMAN 1 KANDANGAN dan saya juga belajar secara otodidak lewat insatagram dan juga tiktok.Selain itu aku juga kadang membuat cerpen saat gabut atau pas lagi nongkrong sama temen.
+            Selamat datang di web buatan ku yang aslinya aku gabut aja sih buat ini jadi yaa you know masih berantakan, dan banyak portofolio lain yang tidak kucantumkan di sini dan langsung aja di Instagram @_xyviiee disana aku post semua hasil portofolio ku dari aku awal awal belajar kamera hingga yaaaa mungkin menguasai beberapa teknik.
+            SALAM KENAL YA.... 
+        </p>
+    </section>
+
+    <!-- 3. HASIL POTRETAN (6 FOTO) -->
+    <h2 class="section-title">VISUAL CAPTURES <span>// PRESENT COLLECTION IN GALLERY </span></h2>
+    
+    <section class="gallery-grid">
+        <!-- Foto 1 -->
+        <div class="photo-card">
+            <img src="portofolio-1..jpeg" alt="Koleksi Potret 1">
+            <div class="photo-info">Stage Photography / Full Shot Framing </div>
+        </div>
+        <!-- Foto 2 -->
+        <div class="photo-card">
+            <img src="portofolio-2..jpeg" alt="Koleksi Potret 2">
+            <div class="photo-info">Action Freeze / Available Light Storytelling</div>
+        </div>
+        <!-- Foto 3 -->
+        <div class="photo-card">
+            <img src="portofolio-4..JPG" alt="Koleksi Potret 3">
+            <div class="photo-info">Low-Light Action Photography / High Angle Perspective</div>
+        </div>
+        <!-- Foto 4 -->
+        <div class="photo-card">
+            <img src="portofolio-5..JPG" alt="Koleksi Potret 4">
+            <div class="photo-info">Human Interest / Cultural Portraiture</div>
+        </div>
+        <!-- Foto 5 -->
+        <div class="photo-card">
+            <img src="portofolio-6..jpeg" alt="Koleksi Potret 5">
+            <div class="photo-info">Landscape View // Nature Tone</div>
+        </div>
+        <!-- Foto 6 -->
+        <div class="photo-card">
+            <img src="portofolio-7..jpg" alt="Koleksi Potret 6">
+            <div class="photo-info">Shallow Depth of Field / Selective Focusing</div>
+        </div>
+    </section>
+
+    <!-- 4. LINK CERPEN KE WEBLOG -->
+    <h2 class="section-title">LITERARY ARCHIVE <span>// SHORT STORY </span></h2>
+    
+    <section class="blog-section">
+        <h3>Ini Kumpulan Cerpen Buatanku</h3>
+        <p>Kalo pingin baca cerpen atau puisi bahkan novel bisa ke weweblog ku yaa.</p>
+
+        <a href="https://cerpengabutpiaaan.blogspot.com" target="_blank" class="blog-button">Buka Weblog Saya ➔</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div>&copy; 2026 XYVIIEE. ALL RIGHTS RESERVED.</div>
+        <div>MINIMALIST ARCHIVE v2.0</div>
+    </footer>
+
+</body>
+</html>
